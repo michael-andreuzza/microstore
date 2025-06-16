@@ -1,15 +1,14 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/global/Footer.astro";
+import BaseHead from "@/components/BaseHead.astro";
+import Footer from "@/components/global/Footer.astro";
 ---
 
 <html lang="en">
   <head>
     <BaseHead />
   </head>
-
-  <body class="bg-charcoal-500">
-    <slot />
-<Footer/>
+  <body class="bg-white max-w-6xl mx-auto px-8 lg:px-12 flex flex-col">
+    <main class="grow"><slot /></main>
+    <Footer />
   </body>
 </html>

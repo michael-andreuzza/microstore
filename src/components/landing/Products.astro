@@ -1,98 +1,83 @@
-<main  >
+---
+import { Image } from "astro:assets";
+import p1 from "@/images/1.jpeg";
+import p2 from "@/images/2.jpeg";
+import p3 from "@/images/3.jpeg";
+import p4 from "@/images/4.jpeg";
+import p5 from "@/images/5.jpeg";
+import p6 from "@/images/6.jpeg";
+const products = [
+  {
+    url: "#_",
+    title: "Dual-Port Bit Driver",
+    subtitle: "Cobalt blue CNC finish",
+    price: "$59",
+    image: p1,
+  },
+  {
+    url: "#_",
+    title: "Analog Audio Control Hub",
+    subtitle: "Soft matte with ring LEDs",
+    price: "$79",
+    image: p2,
+  },
+  {
+    url: "#_",
+    title: "Laser Range Unit",
+    subtitle: "Black anodized edge + sensor",
+    price: "$110",
+    image: p3,
+  },
+  {
+    url: "#_",
+    title: "Smart Object Desk Set",
+    subtitle: "Minimalist modular kit",
+    price: "$129",
+    image: p4,
+  },
+  {
+    url: "#_",
+    title: "Modular Synth Box",
+    subtitle: "Magnetic knobs, dual input",
+    price: "$149",
+    image: p5,
+  },
+  {
+    url: "#_",
+    title: "Compact Action Camera",
+    subtitle: "Transparent shell, neon ring",
+    price: "$189",
+    image: p6,
+  },
+];
+---
 
-  <div class="relative mx-auto px-8 max-w-7xl py-12   md:px-12">
-    <div
-      class="grid grid-cols-1 gap-6 lg:gap-y-32 md:grid-cols-2 ">
-      <figure>
-        <img
-          class="w-full rounded-3xl shadow-2xl"
-          src="https://cdn.dribbble.com/users/1622978/screenshots/16873134/media/7f5d72bce5b94fe1ae56484394de673f.jpg?compress=1&resize=1600x1200&vertical=top"
-          alt=""
-          width="1310"
-          height="873"
-        />
-        <div class="mt-4 flex justify-between px-6">
-          <div>
-            <h3 class="text-sm text-negroni-500">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Paper bags with print
-              </a>
-            </h3>
-            <p class="mt-1 text-lg font-medium leading-6 text-white">Beige</p>
+<section>
+  <div
+    class="grid grid-cols-1 gap-6 lg:gap-y-24 md:grid-cols-2 lg:grid-cols-3 py-12"
+  >
+    {
+      products.map((product) => (
+        <figure class="relative ">
+          <a href={product.url} aria-hidden="true" class="absolute inset-0" />
+          <Image
+            width="800"
+            height="800"
+            alt={product.title}
+            src={product.image}
+            class="w-full rounded-3xl shadow aspect-12/9 object-cover object-center"
+          />
+          <div class="mt-2 flex justify-between px-6">
+            <div>
+              <p class="mt-1 text-sm font-medium  text-base-900">
+                {product.subtitle}
+              </p>
+              <h3 class="text-xs text-base-500">{product.title}</h3>
+            </div>
+            <p class="text-base text-orange-600">{product.price}</p>
           </div>
-          <p class="text-base text-tomato-500">$3</p>
-        </div>
-      </figure>
-      <figure>
-        <img
-          class="w-full rounded-3xl shadow-2xl"
-          src="https://cdn.dribbble.com/users/1622978/screenshots/16873134/media/8ea407efd5f947aa6a37488cfe305269.jpg?compress=1&resize=1600x1200&vertical=top"
-          alt=""
-          width="1310"
-          height="873"
-        />
-        <div class="mt-4 flex justify-between px-6">
-          <div>
-            <h3 class="text-sm text-negroni-500">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Basic Tee bag
-              </a>
-            </h3>
-            <p class="mt-1 text-lg font-medium leading-6 text-white">
-              Olive green / Orange
-            </p>
-          </div>
-          <p class="text-base text-tomato-500">$35</p>
-        </div>
-      </figure>
-      <figure>
-        <img
-          class="w-full rounded-3xl shadow-2xl"
-          src="https://cdn.dribbble.com/users/1622978/screenshots/16397986/media/75e59a9fcf94b8a51764df66ce7a1d4f.jpg?compress=1&resize=1600x1200&vertical=top"
-          alt=""
-          width="1310"
-          height="873"
-        />
-        <div class="mt-4 flex justify-between px-6">
-          <div>
-            <h3 class="text-sm text-negroni-500">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Coffe bag
-              </a>
-            </h3>
-            <p class="mt-1 text-lg font-medium leading-6 text-white">
-              Strong. Level: Developer
-            </p>
-          </div>
-          <p class="text-base text-tomato-500">$35</p>
-        </div>
-      </figure>
-      <figure>
-        <img
-          class="w-full rounded-3xl shadow-2xl"
-          src="https://cdn.dribbble.com/userupload/2739254/file/original-ac8226a7213611e49363fc0176a48cb0.jpg?compress=1&resize=1504x1128"
-          alt=""
-          width="1310"
-          height="873"
-        />
-        <div class="mt-4 flex justify-between px-6">
-          <div>
-            <h3 class="text-sm text-negroni-500">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Coffe bag
-              </a>
-            </h3>
-            <p class="mt-1 text-lg font-medium leading-6 text-white">
-              Strong. Level: Designer
-            </p>
-          </div>
-          <p class="text-base text-tomato-500">$35</p>
-        </div>
-      </figure>
-    </div>
+        </figure>
+      ))
+    }
   </div>
-</main>
+</section>

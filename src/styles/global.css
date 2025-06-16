@@ -1,41 +1,33 @@
 @import "tailwindcss";
 @theme {
 
-  /* Charcoal  */
-  --color-charcoal-50: #eceeec;
-  --color-charcoal-100: #d7dad7;
-  --color-charcoal-200: #b0b5b0;
-  --color-charcoal-300: #889188;
-  --color-charcoal-400: #626a62;
-  --color-charcoal-500: #3e433e; /* Default */
-  --color-charcoal-600: #313531;
-  --color-charcoal-700: #252825;
-  --color-charcoal-800: #191a19;
-  --color-charcoal-900: #0c0d0c;
+  /* base  */
+ --color-base-50: oklch(97.3% 0.005 145.13);
+  --color-base-100: oklch(93.86% 0.013 141.67);
+  --color-base-200: oklch(88.55% 0.021 140.81);
+  --color-base-300: oklch(82.47% 0.02 140.41);
+  --color-base-400: oklch(76.52% 0.019 142.72);
+  --color-base-500: oklch(71.5% 0.018 142.45);
+  --color-base-600: oklch(65.4% 0.016 142.12);
+  --color-base-700: oklch(52.38% 0.013 141.15);
+  --color-base-800: oklch(39.62% 0.01 139.36);
+  --color-base-900: oklch(26.54% 0.006 134.86);
+  --color-base-950: oklch(20.6% 0.005 145.31);
 
-  /* Tomato  */
-  --color-tomato-50: #ffeeeb;
-  --color-tomato-100: #ffe1dc;
-  --color-tomato-200: #febfb3;
-  --color-tomato-300: #fea090;
-  --color-tomato-400: #fd7e68;
-  --color-tomato-500: #fd6043; /* Default */
-  --color-tomato-600: #fc2803;
-  --color-tomato-700: #c01e02;
-  --color-tomato-800: #7e1401;
-  --color-tomato-900: #420a01;
+  /* ORange  */
+  --color-orange-50: oklch(96.67% 0.016 22.18);
+  --color-orange-100: oklch(93.48% 0.031 25.08);
+  --color-orange-200: oklch(87.73% 0.063 23.27);
+  --color-orange-300: oklch(81.39% 0.103 25.4);
+  --color-orange-400: oklch(74.91% 0.147 28.05);
+  --color-orange-500: oklch(68.91% 0.197 32.57);
+  --color-orange-600: oklch(58.25% 0.195 35.62);
+  --color-orange-700: oklch(47.53% 0.159 35.63);
+  --color-orange-800: oklch(36.86% 0.123 35.58);
+  --color-orange-900: oklch(24.99% 0.084 35.46);
+  --color-orange-950: oklch(19.57% 0.065 34.67);
 
-  /* Negroni  */
-  --color-negroni-50: #fdfaf7;
-  --color-negroni-100: #fbf5ef;
-  --color-negroni-200: #f6e8da;
-  --color-negroni-300: #f2deca;
-  --color-negroni-400: #edd1b5;
-  --color-negroni-500: #e9c7a5; /* Default */
-  --color-negroni-600: #d99e63;
-  --color-negroni-700: #c1782f;
-  --color-negroni-800: #7f4f1f;
-  --color-negroni-900: #422910;
+
 }
 /* CSS */
 :root {

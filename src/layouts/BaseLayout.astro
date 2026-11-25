@@ -5,6 +5,14 @@ import Footer from "@/components/global/Footer.astro";
 
 <html lang="en">
   <head>
+    <script is:inline>
+      (function () {
+        if (window.top !== window.self) return;
+        var h = location.hostname;
+        if (h === "localhost" || h === "127.0.0.1") return;
+        location.replace("https://lexingtonthemes.com/viewports/microstore");
+      })();
+    </script>
     <BaseHead />
   </head>
   <body class="bg-white max-w-6xl mx-auto px-8 lg:px-12 flex flex-col">
